@@ -67,6 +67,17 @@ namespace UIWinFormsApp
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (FormMBuscarGrupoUsuario frm = new FormMBuscarGrupoUsuario())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             //using (FormBuscarModelo frm = new FormBuscarModelo(new FormularioModelo(new GrupoProdutoBLL(),
             //    new GrupoProduto(),
             //    "Cadastro de grupo de produto",

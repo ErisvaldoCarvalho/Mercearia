@@ -62,6 +62,7 @@
             this.buttonSelecionar.TabIndex = 10;
             this.buttonSelecionar.Text = "Seleciona&r";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
+            this.buttonSelecionar.Visible = false;
             // 
             // buttonExcluir
             // 
@@ -102,6 +103,7 @@
             this.buttonBuscar.TabIndex = 14;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
+            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
             // label2
             // 

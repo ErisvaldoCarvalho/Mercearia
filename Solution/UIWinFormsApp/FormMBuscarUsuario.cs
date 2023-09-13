@@ -10,6 +10,10 @@ namespace UIWinFormsApp
         {
             InitializeComponent();
         }
+        public FormMBuscarUsuario(bool _selecionarRegistro = false) : base(_selecionarRegistro)
+        {
+            InitializeComponent();
+        }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
@@ -24,23 +28,30 @@ namespace UIWinFormsApp
         }
         public override void Buscar()
         {
-            switch (comboBoxBuscarPor.SelectedIndex)
+            try
             {
-                case 0:
-                    bindingSourceBusca.DataSource = new UsuarioBLL().BuscarPorNome(textBoxBuscarPor.Text);
-                    break;
-                case 1:
-                    bindingSourceBusca.DataSource = new UsuarioBLL().BuscarTodos();
-                    break;
-                default:
-                    break;
+                switch (comboBoxBuscarPor.SelectedIndex)
+                {
+                    case 0:
+                        bindingSourceBusca.DataSource = new UsuarioBLL().BuscarPorNome(textBoxBuscarPor.Text);
+                        break;
+                    case 1:
+                        bindingSourceBusca.DataSource = new UsuarioBLL().BuscarTodos();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void buttonExcluir_Click(object sender, EventArgs e)
         {
             try
             {
-                if(bindingSourceBusca.Count == 0)
+                if (bindingSourceBusca.Count == 0)
                     throw new Exception("Não existe registro para ser excluído") { Data = { { "Id", 1003 } } };
 
                 if (MessageBox.Show("Deseja realmente excluir este registro?", Constantes.NomeDoSistema, MessageBoxButtons.YesNo) == DialogResult.No)
