@@ -1,5 +1,6 @@
 ﻿using BLL;
 using Models;
+using System.Security.Cryptography.Xml;
 
 namespace UIWinFormsApp
 {
@@ -117,6 +118,24 @@ namespace UIWinFormsApp
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            bool status = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells["ativoDataGridViewCheckBoxColumn"].Value);
+
+            int x = new Random().Next(1, 3);
+            if (x == 1)
+                dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+            else if (x == 2)
+                dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+            else 
+                dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+            /*
+                        dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                        if (status)
+                            dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
+            */
         }
     }
 }

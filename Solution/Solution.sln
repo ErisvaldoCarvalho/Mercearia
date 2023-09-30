@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{8127FE0F-DEAC-4989-ACED-CE62451B1B34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{8127FE0F-DEAC-4989-ACED-CE62451B1B34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D421CE07-FD03-4F56-9F77-91CCE71DDFF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{D421CE07-FD03-4F56-9F77-91CCE71DDFF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIWinFormsApp", "UIWinFormsApp\UIWinFormsApp.csproj", "{747ACF7D-01E8-4E70-B0F5-C8D509ACEAF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIWinFormsApp", "UIWinFormsApp\UIWinFormsApp.csproj", "{747ACF7D-01E8-4E70-B0F5-C8D509ACEAF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{53D0B90F-4E99-44C6-ABC8-735997F3CF40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{53D0B90F-4E99-44C6-ABC8-735997F3CF40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIWebApplication", "UIWebApplication\UIWebApplication.csproj", "{7F4494D6-E98C-48EB-8EB1-883ED1B8AA51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{53D0B90F-4E99-44C6-ABC8-735997F3CF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53D0B90F-4E99-44C6-ABC8-735997F3CF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53D0B90F-4E99-44C6-ABC8-735997F3CF40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F4494D6-E98C-48EB-8EB1-883ED1B8AA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F4494D6-E98C-48EB-8EB1-883ED1B8AA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F4494D6-E98C-48EB-8EB1-883ED1B8AA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F4494D6-E98C-48EB-8EB1-883ED1B8AA51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

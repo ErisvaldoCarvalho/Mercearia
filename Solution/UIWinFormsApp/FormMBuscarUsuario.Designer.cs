@@ -87,6 +87,7 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(708, 237);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView1_RowPrePaint);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
