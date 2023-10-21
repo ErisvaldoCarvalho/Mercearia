@@ -88,5 +88,23 @@ namespace UIWinFormsApp
             //    frm.ShowDialog();
             //}
         }
+
+        private void produtosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (FormMBuscarProduto frm = new FormMBuscarProduto())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

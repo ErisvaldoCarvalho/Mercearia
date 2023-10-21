@@ -16,20 +16,34 @@ namespace BLL
 
         public List<IEntidade> BuscarPorDescricao(string _descricao)
         {
-            List<IEntidade> lista = new List<IEntidade>();
-            
-            return lista;
+            using (var context = new DataContext())
+            {
+                List<GrupoProduto> listaGrupoProduto = context.GrupoProduto
+                                                              .Where(gp => gp.Descricao.Contains(_descricao))
+                                                              .ToList();
+
+                List<IEntidade> listaIEntidade = listaGrupoProduto.Cast<IEntidade>().ToList();
+
+                return listaIEntidade;
+            }
+
         }
 
         public IEntidade BuscarPorId(int _id)
         {
-            //return new GrupoProduto() { Id = _id, Descricao = "asdf" };
-            return new DataContext().GrupoProduto.Where(item => item.Id == _id).SingleOrDefault();
+            using (DataContext dataContext = new DataContext())
+            {
+                return dataContext.GrupoProduto.Where(item => item.Id == _id).SingleOrDefault();
+            }
         }
 
         public List<IEntidade> BuscarTodos()
         {
-            return null;
+            using (DataContext dataContext = new DataContext())
+            {
+                List<GrupoUsuario> grupoUsuarioList = dataContext.GrupoUsuario.ToList();
+                return grupoUsuarioList.Cast<IEntidade>().ToList();
+            }
         }
 
         public void Excluir(int _id)
