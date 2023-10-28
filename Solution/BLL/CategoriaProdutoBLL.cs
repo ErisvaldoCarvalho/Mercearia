@@ -5,41 +5,26 @@ namespace BLL
 {
     public class CategoriaProdutoBLL
     {
-        public void Inserir(CategoriaProduto _categoriaProduto)
+        public void Salvar(CategoriaProduto _categoriaProduto)
         {
-            using (DataContext dataContext = new DataContext())
-            {
-                dataContext.Add(_categoriaProduto);
-                dataContext.SaveChanges();
-            }
-        }
-        public void Alterar(CategoriaProduto _categoriaProduto)
-        {
-            using (DataContext dataContext = new DataContext())
-            {
-                dataContext.Update(_categoriaProduto);
-                dataContext.SaveChanges();
-            }
+            new CategoriaProdutoDAL().Salvar(_categoriaProduto);
         }
         public void Excluir(int _id)
         {
-            using (DataContext dataContext = new DataContext())
-            {
-                dataContext.Remove(BuscarPorId(_id));
-                dataContext.SaveChanges();
-            }
+            new CategoriaProdutoDAL().Excluir(_id);
         }
         public List<CategoriaProduto> BuscarTodos()
         {
-            return new DataContext().CategoriaProduto.ToList();
+            return new CategoriaProdutoDAL().BuscarTodos();
         }
         public CategoriaProduto BuscarPorId(int _id)
         {
             return new DataContext().CategoriaProduto.Where(item => item.Id == _id).SingleOrDefault();
         }
-        public List<CategoriaProduto> BuscarDescricao(string _descricao)
+        public List<CategoriaProduto> BuscarPorNomeCampo(string _descricao)
         {
-            return new DataContext().CategoriaProduto.Where(item => item.Descricao.Contains(_descricao)).ToList();
+            return new CategoriaProdutoDAL().BuscarPorNomeCampo(_descricao);
+            //return new DataContext().CategoriaProduto.Where(item => item.Descricao.Contains(_descricao)).ToList();
         }
     }
 }

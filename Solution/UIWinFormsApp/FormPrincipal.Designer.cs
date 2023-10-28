@@ -52,6 +52,7 @@
             this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fluxoDeCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasBancosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +77,8 @@
             this.produtosToolStripMenuItem,
             this.produtosToolStripMenuItem1,
             this.clientesToolStripMenuItem,
-            this.fornecedoresToolStripMenuItem});
+            this.fornecedoresToolStripMenuItem,
+            this.categoriaDeProdutosToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -84,35 +86,35 @@
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.usuárioToolStripMenuItem.Text = "Usuários";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.produtosToolStripMenuItem.Text = "Grupos de usuários";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem1
             // 
             this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
             this.produtosToolStripMenuItem1.Text = "Produtos";
             this.produtosToolStripMenuItem1.Click += new System.EventHandler(this.produtosToolStripMenuItem1_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
@@ -235,6 +237,13 @@
             this.contasBancosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.contasBancosToolStripMenuItem.Text = "Contas/Bancos";
             // 
+            // categoriaDeProdutosToolStripMenuItem
+            // 
+            this.categoriaDeProdutosToolStripMenuItem.Name = "categoriaDeProdutosToolStripMenuItem";
+            this.categoriaDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.categoriaDeProdutosToolStripMenuItem.Text = "Categoria de produtos";
+            this.categoriaDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.categoriaDeProdutosToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -277,5 +286,6 @@
         private ToolStripMenuItem contasAPagarToolStripMenuItem;
         private ToolStripMenuItem fluxoDeCaixaToolStripMenuItem;
         private ToolStripMenuItem contasBancosToolStripMenuItem;
+        private ToolStripMenuItem categoriaDeProdutosToolStripMenuItem;
     }
 }

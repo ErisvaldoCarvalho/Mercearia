@@ -1,14 +1,4 @@
 ﻿using BLL;
-using Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace UIWinFormsApp
 {
@@ -18,7 +8,6 @@ namespace UIWinFormsApp
         {
             InitializeComponent();
         }
-
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             try
@@ -49,7 +38,6 @@ namespace UIWinFormsApp
                 Application.Exit();
             }
         }
-
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -78,15 +66,6 @@ namespace UIWinFormsApp
             {
                 MessageBox.Show(ex.Message);
             }
-            //using (FormBuscarModelo frm = new FormBuscarModelo(new FormularioModelo(new GrupoProdutoBLL(),
-            //    new GrupoProduto(),
-            //    "Cadastro de grupo de produto",
-            //    "Grupo de produto",
-            //    "Departamento de produto",
-            //    0)))
-            //{
-            //    frm.ShowDialog();
-            //}
         }
 
         private void produtosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -105,6 +84,21 @@ namespace UIWinFormsApp
         private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void categoriaDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (FormMBuscarCategoriaProduto frm = new FormMBuscarCategoriaProduto())
+                {
+                    frm.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

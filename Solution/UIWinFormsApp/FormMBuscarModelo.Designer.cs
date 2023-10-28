@@ -63,6 +63,7 @@
             this.buttonSelecionar.Text = "Seleciona&r";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
             this.buttonSelecionar.Visible = false;
+            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonExcluir
             // 

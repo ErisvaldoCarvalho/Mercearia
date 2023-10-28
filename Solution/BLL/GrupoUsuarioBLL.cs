@@ -21,6 +21,11 @@ namespace BLL
         {
             return new DataContext().GrupoUsuario.Where(item => item.Descricao.Contains(_descricao)).ToList();
         }
+        public List<CategoriaProduto> BuscarPorNomeCampo(string _descricao)
+        {
+            return new CategoriaProdutoDAL().BuscarPorNomeCampo(_descricao);
+            //return new DataContext().CategoriaProduto.Where(item => item.Descricao.Contains(_descricao)).ToList();
+        }
         public GrupoUsuario BuscarPorId(int _id)
         {
             return new DataContext().GrupoUsuario.Where(item => item.Id == _id).FirstOrDefault();

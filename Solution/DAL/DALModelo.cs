@@ -198,7 +198,6 @@ namespace DAL
                 dataContext.SaveChanges();
             }
         }
-
         public virtual void Excluir(int _id)
         {
             var t = new T();
@@ -210,6 +209,10 @@ namespace DAL
         }
         public virtual List<T> BuscarTodos(SqlCommand _cmd = null)
         {
+            if (Constantes.UsarEntityFramework)
+            {
+                //TODO: Implementar a busca utilizndo Entity Framework aqui
+            }
             var tList = new List<T>();
             var t = new T();
             SqlConnection cn = new SqlConnection(Conexao.StringDeConexao);
@@ -275,8 +278,8 @@ namespace DAL
             {
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.CommandText = ScriptSelect + " WHERE " + nameof(_t) + "." + nameof(propriedade) + " = @" + nameof(propriedade);
-                    cmd.Parameters.AddWithValue("@" + nameof(propriedade), id);
+                    cmd.CommandText = ScriptSelect + " WHERE " + nameof(_t) + "." + nameof(propriedade) + "Id = @" + nameof(_t) + "Id";
+                    cmd.Parameters.AddWithValue("@" + nameof(_t) + "Id", id);
                     var tList = BuscarTodos(cmd);
                     return tList;
                 }
@@ -284,6 +287,26 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception("Ocorreu um erro ao tentar buscar " + Constantes.Verbose(nameof(_t)).ToLower() + " por " + nameof(_t) + "." + nameof(propriedade) + " no banco de dados.", ex) { Data = { { "Id", 3 } } };
+            }
+        }
+        public virtual List<T>? BuscarPorNomeCampo(string _nomeCampo)
+        {
+            var t = new T();
+            var propriedade = t.GetType().GetProperty(_nomeCampo);
+            var campo = propriedade.GetValue(t);
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.CommandText = ScriptSelect + " WHERE " + nameof(t) + "." + _nomeCampo + " = @" + _nomeCampo;
+                    cmd.Parameters.AddWithValue("@" + _nomeCampo, campo);
+                    var tList = BuscarTodos(cmd);
+                    return tList;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocorreu um erro ao tentar buscar " + Constantes.Verbose(nameof(t)).ToLower() + " por " + nameof(t) + "." + nameof(propriedade) + " no banco de dados.", ex) { Data = { { "Id", 3 } } };
             }
         }
         protected T PreencherObjeto(SqlDataReader _rd)

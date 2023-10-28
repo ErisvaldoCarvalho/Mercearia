@@ -23,6 +23,7 @@ namespace DAL
 
         public DbSet<Compra> Compra { get; set; }
         public DbSet<ContasAReceber> ContasAReceber { get; set; }
+        public DbSet<ContasAPagar> ContasAPagar { get; set; }
         public DbSet<DepartamentoProduto> DepartamentoProduto { get; set; }
         public DbSet<FixaKardex> FixaKardex { get; set; }
         public DbSet<FormaPagamento> FormaPagamento { get; set; }
@@ -31,6 +32,7 @@ namespace DAL
         public DbSet<GrupoUsuario> GrupoUsuario { get; set; }
         public DbSet<ItemCompra> ItemCompra { get; set; }
         public DbSet<ItemContasAReceber> ItemContasAReceber { get; set; }
+        public DbSet<ItemContasAPagar> ItemContasAPagar { get; set; }
         public DbSet<ItemVenda> ItemVenda { get; set; }
         public DbSet<Marca> Marca { get; set; }
         public DbSet<Permissao> Permissao { get; set; }

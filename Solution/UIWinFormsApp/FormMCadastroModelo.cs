@@ -28,5 +28,43 @@ namespace UIWinFormsApp
             if (e.KeyCode == Keys.Escape)
                 Close();
         }
+
+        private void FormMCadastroModelo_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Id == 0)
+                    bindingSourceCadastro.AddNew();
+                else
+                    CarregarDadosParaEditar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public virtual void CarregarDadosParaEditar()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void buttonSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bindingSourceCadastro.EndEdit();
+                Salvar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public virtual void Salvar()
+        {
+            
+        }
     }
 }

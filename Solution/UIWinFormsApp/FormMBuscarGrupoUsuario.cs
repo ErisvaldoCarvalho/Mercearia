@@ -22,17 +22,8 @@ namespace UIWinFormsApp
         {
             try
             {
-                switch (comboBoxBuscarPor.SelectedIndex)
-                {
-                    case 0:
-                        bindingSourceBusca.DataSource = new GrupoUsuarioBLL().BuscarPorDescricao(textBoxBuscarPor.Text);
-                        break;
-                    case 1:
-                        bindingSourceBusca.DataSource = new GrupoUsuarioBLL().BuscarTodos();
-                        break;
-                    default:
-                        break;
-                }
+                if (comboBoxBuscarPor.SelectedIndex != comboBoxBuscarPor.Items.Count - 1)
+                    bindingSourceBusca.DataSource = new GrupoUsuarioBLL().BuscarPorDescricao(comboBoxBuscarPor.Text);
             }
             catch (Exception ex)
             {

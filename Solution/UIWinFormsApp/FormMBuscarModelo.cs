@@ -47,5 +47,10 @@
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonSelecionar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

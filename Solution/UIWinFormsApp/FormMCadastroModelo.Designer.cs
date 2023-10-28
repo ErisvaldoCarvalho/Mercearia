@@ -70,6 +70,7 @@
             this.buttonSalvar.TabIndex = 4;
             this.buttonSalvar.Text = "Sal&var";
             this.buttonSalvar.UseVisualStyleBackColor = true;
+            this.buttonSalvar.Click += new System.EventHandler(this.buttonSalvar_Click);
             // 
             // FormMCadastroModelo
             // 
@@ -88,6 +89,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormMCadastroModelo_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMCadastroModelo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceInnerEntidade)).EndInit();
