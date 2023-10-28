@@ -41,7 +41,7 @@ namespace DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"User Id = Erisvaldo;Initial Catalog=Mercearia;Data Source=.\SQLEXPRESS2019;Password=123;Integrated Security=SSPI;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(Conexao.StringDeConexao);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

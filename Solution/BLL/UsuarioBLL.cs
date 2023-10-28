@@ -8,12 +8,7 @@ namespace BLL
         public void Inserir(Usuario _usuario, string _confirmacaoSenha)
         {
             ValidarDados(_usuario, _confirmacaoSenha);
-
-            using (DataContext dataContext = new DataContext())
-            {
-                dataContext.Add(_usuario);
-                dataContext.SaveChanges();
-            }
+            new UsuarioDAL().Salvar(_usuario);            
         }
 
         private void ValidarDados(Usuario _usuario, string _confirmacaoSenha)
