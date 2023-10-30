@@ -11,6 +11,10 @@ namespace UIWinFormsApp
         public IEntidade Entidade { get; set; }
         public IEntidade InnerEntidade { get; set; }
 
+        public FormCadastroModelo()
+        {
+            InitializeComponent();
+        }
         public FormCadastroModelo(int _id)
         {
             InitializeComponent();
