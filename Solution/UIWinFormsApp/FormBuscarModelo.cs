@@ -18,6 +18,10 @@ namespace UIWinFormsApp
         public FormularioModelo FormularioModelo { get; set; }
         public IBLL BLL { get; set; }
         public IEntidade InnerEntidade { get; set; }
+        public FormBuscarModelo()
+        {
+            InitializeComponent();
+        }
         public FormBuscarModelo(FormularioModelo _formularioModelo = null)
         {
             InitializeComponent();
