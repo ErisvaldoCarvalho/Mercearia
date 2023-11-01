@@ -34,15 +34,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // buttonInserir
+            // 
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.Size = new System.Drawing.Size(835, 61);
+            // 
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.Items.AddRange(new object[] {
             "Descrição",
             "Todos"});
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.Size = new System.Drawing.Size(835, 61);
             // 
             // bindingSourceBusca
             // 

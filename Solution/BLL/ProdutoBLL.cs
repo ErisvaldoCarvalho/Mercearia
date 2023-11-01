@@ -9,6 +9,11 @@ namespace BLL
             throw new NotImplementedException();
         }
 
+        public List<IEntidade> BuscarPorCampo(string _campo, string _valorABuscar)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<IEntidade> BuscarPorCodigoDeBarras(string _codigoDeBarras)
         {
             throw new NotImplementedException();

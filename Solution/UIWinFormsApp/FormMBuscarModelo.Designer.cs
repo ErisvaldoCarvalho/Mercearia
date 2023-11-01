@@ -46,9 +46,10 @@
             // buttonCancelar
             // 
             this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancelar.Location = new System.Drawing.Point(645, 336);
+            this.buttonCancelar.Location = new System.Drawing.Point(737, 448);
+            this.buttonCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancelar.Size = new System.Drawing.Size(86, 31);
             this.buttonCancelar.TabIndex = 9;
             this.buttonCancelar.Text = "&Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
@@ -56,51 +57,58 @@
             // buttonSelecionar
             // 
             this.buttonSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSelecionar.Location = new System.Drawing.Point(564, 336);
+            this.buttonSelecionar.Location = new System.Drawing.Point(645, 448);
+            this.buttonSelecionar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSelecionar.Name = "buttonSelecionar";
-            this.buttonSelecionar.Size = new System.Drawing.Size(75, 23);
+            this.buttonSelecionar.Size = new System.Drawing.Size(86, 31);
             this.buttonSelecionar.TabIndex = 10;
             this.buttonSelecionar.Text = "Seleciona&r";
             this.buttonSelecionar.UseVisualStyleBackColor = true;
             this.buttonSelecionar.Visible = false;
-            this.buttonSelecionar.Click += new System.EventHandler(this.buttonSelecionar_Click);
             // 
             // buttonExcluir
             // 
             this.buttonExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonExcluir.Location = new System.Drawing.Point(645, 64);
+            this.buttonExcluir.Location = new System.Drawing.Point(737, 85);
+            this.buttonExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonExcluir.Name = "buttonExcluir";
-            this.buttonExcluir.Size = new System.Drawing.Size(75, 23);
+            this.buttonExcluir.Size = new System.Drawing.Size(86, 31);
             this.buttonExcluir.TabIndex = 11;
             this.buttonExcluir.Text = "E&xcluir";
             this.buttonExcluir.UseVisualStyleBackColor = true;
+            this.buttonExcluir.Click += new System.EventHandler(this.buttonExcluir_Click);
             // 
             // buttonAlterar
             // 
             this.buttonAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAlterar.Location = new System.Drawing.Point(564, 64);
+            this.buttonAlterar.Location = new System.Drawing.Point(645, 85);
+            this.buttonAlterar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAlterar.Name = "buttonAlterar";
-            this.buttonAlterar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAlterar.Size = new System.Drawing.Size(86, 31);
             this.buttonAlterar.TabIndex = 12;
             this.buttonAlterar.Text = "&Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonInserir
             // 
             this.buttonInserir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInserir.Location = new System.Drawing.Point(483, 64);
+            this.buttonInserir.Location = new System.Drawing.Point(552, 85);
+            this.buttonInserir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(75, 23);
+            this.buttonInserir.Size = new System.Drawing.Size(86, 31);
             this.buttonInserir.TabIndex = 13;
             this.buttonInserir.Text = "&Inserir";
             this.buttonInserir.UseVisualStyleBackColor = true;
+            this.buttonInserir.Click += new System.EventHandler(this.buttonInserir_Click);
             // 
             // buttonBuscar
             // 
             this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscar.Location = new System.Drawing.Point(402, 64);
+            this.buttonBuscar.Location = new System.Drawing.Point(459, 85);
+            this.buttonBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuscar.Size = new System.Drawing.Size(86, 31);
             this.buttonBuscar.TabIndex = 14;
             this.buttonBuscar.Text = "&Buscar";
             this.buttonBuscar.UseVisualStyleBackColor = true;
@@ -109,9 +117,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 46);
+            this.label2.Location = new System.Drawing.Point(14, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 15);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Buscar por";
             // 
@@ -121,7 +129,7 @@
             this.labelTitulo.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(732, 46);
+            this.labelTitulo.Size = new System.Drawing.Size(837, 61);
             this.labelTitulo.TabIndex = 7;
             this.labelTitulo.Text = "Label título";
             this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,27 +138,33 @@
             // 
             this.textBoxBuscarPor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBuscarPor.Location = new System.Drawing.Point(139, 64);
+            this.textBoxBuscarPor.Location = new System.Drawing.Point(159, 85);
+            this.textBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxBuscarPor.Name = "textBoxBuscarPor";
-            this.textBoxBuscarPor.Size = new System.Drawing.Size(257, 23);
+            this.textBoxBuscarPor.Size = new System.Drawing.Size(293, 27);
             this.textBoxBuscarPor.TabIndex = 6;
             this.textBoxBuscarPor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxBuscarPor_KeyDown);
             // 
             // comboBoxBuscarPor
             // 
             this.comboBoxBuscarPor.FormattingEnabled = true;
-            this.comboBoxBuscarPor.Location = new System.Drawing.Point(12, 64);
+            this.comboBoxBuscarPor.Location = new System.Drawing.Point(14, 85);
+            this.comboBoxBuscarPor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxBuscarPor.Name = "comboBoxBuscarPor";
-            this.comboBoxBuscarPor.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxBuscarPor.Size = new System.Drawing.Size(138, 28);
             this.comboBoxBuscarPor.TabIndex = 5;
+            // 
+            // bindingSourceBusca
+            // 
+            this.bindingSourceBusca.DataSource = typeof(Models.Marca);
             // 
             // FormMBuscarModelo
             // 
             this.AcceptButton = this.buttonSelecionar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(732, 371);
+            this.ClientSize = new System.Drawing.Size(837, 495);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonSelecionar);
             this.Controls.Add(this.buttonExcluir);
@@ -163,13 +177,13 @@
             this.Controls.Add(this.comboBoxBuscarPor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMBuscarModelo";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormMBuscarModelo_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBusca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

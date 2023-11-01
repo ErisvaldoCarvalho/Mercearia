@@ -8,6 +8,12 @@
 
         public static bool UsarEntityFramework { get { return true; } }
 
+        public static string Unverbose(string _texto)
+        {
+            //TODO: Montar o dicionário aqui
+            return _texto;
+        }
+
         public static string Verbose(string _texto)
         {
             //TODO: Montar o dicionário aqui

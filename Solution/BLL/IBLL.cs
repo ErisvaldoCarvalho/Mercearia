@@ -10,5 +10,6 @@ namespace BLL
         List<IEntidade> BuscarTodos();
         IEntidade BuscarPorId(int _id);
         List<IEntidade> BuscarPorDescricao(string _descricao);
+        List<IEntidade> BuscarPorCampo(string _campo, string _valorABuscar);
     }
 }
