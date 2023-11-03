@@ -38,5 +38,12 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
+        public void Salvar(IEntidade _entidade)
+        {
+            if (_entidade.Id == 0)
+                Inserir(_entidade);
+            else
+                Alterar(_entidade);
+        }
     }
 }

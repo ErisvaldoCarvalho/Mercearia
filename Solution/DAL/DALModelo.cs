@@ -24,7 +24,7 @@ namespace DAL
             idExceptionSalvar = new Dictionary<Operacao, int>();
 
             nomeTabela = typeof(T).Name;
-
+            // Carro.Id, Carro.Nome,  Carro.Placa,  Carro.Chassi) values(@Nome, @Placa, @Chassi)
             ScriptInsert = "INSERT INTO " + nomeTabela + "(" + Campos(t).Replace("Id, ", "") + ") VALUES(@" + Campos(t).Replace("Id, ", "").Replace(", ", ", @") + ")";
             ScriptSelect = "SELECT " + nomeTabela + "." + Campos(t).Replace(", ", ", " + nomeTabela + ".") + " FROM " + nomeTabela;
             ScriptUpdate = UpdateScript(t);
@@ -250,6 +250,12 @@ namespace DAL
             {
                 cn.Close();
             }
+        }
+        public virtual T BuscarPorId(int _id)
+        {
+            var t = new T();
+            //TODO: Adicionar id no objeto
+            return BuscarPorId(t);
         }
         public virtual T BuscarPorId(T _t)
         {
